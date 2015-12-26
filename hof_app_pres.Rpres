@@ -1,0 +1,38 @@
+MLB Hall of Fame Stats Application
+===
+author: Scott Milner
+date: 12/22/2015
+
+Hall of Fame Statistics
+===
+
+Each winter the Baseball Writers Association of America (BBWAA) evaluates the careers of recently retired major league baseball players and determines if they 
+meet the 'standards' of the Hall of Fame.  There are no set guidelines or statistical barriers that indicate a player's worhiness, only their comparative statistical history amoung their peers.  There are, of course, other human factors that enter into the voting process, but ultimately it is a players accumualted batting and/or pitching statistics that make them 'worthy' in the eyes of the elctorate.
+
+The intention of this application is to offer an easy to use statistical comparison tool to help define a player's place within the game and to offer a probablitliy on their successful election that year.
+
+
+Career Batting Dataset
+===
+
+The basis for our analysis comes from the Lahman Baseball Database which includes yearly statistical data from 1871 through 2014. The data is available in CSV file format which allows for easy loading and manipulation.
+
+```{r}
+careerBattingDataset = read.csv("data/CareerBatting.csv", header = TRUE)
+head(careerBattingDataset)
+```
+
+
+HOF App Interface
+===
+
+The main user interface contains a panel for usage directions and notes as well as the slider and table panel for handling inputs and displaying results.
+![alt text](www/hof_app_ss_01.png)
+
+
+User Interactions
+===
+
+![alt text](www/hof_app_ss_02_highlights.png)
+***
+The value sliders provide an intuative interface for allowing the user to manipulate the minimum statistical levels that go into the odds of induction algorithm.
